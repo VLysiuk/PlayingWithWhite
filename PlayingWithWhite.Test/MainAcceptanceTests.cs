@@ -46,6 +46,7 @@ namespace PlayingWithWhite.Test
             var exitButton = mainForm.Get<Button>("_exitButton");
             exitButton.RaiseClickEvent();//Click();
 
+            Assert.IsTrue(mainForm.IsClosed);
             Assert.IsTrue(_application.HasExited);
         }
 
