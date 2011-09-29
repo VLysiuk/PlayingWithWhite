@@ -65,10 +65,15 @@ namespace PlayingWithWhite.Test
             loginTextBox.BulkText = "My Cool Login";
 
             passwdTextBox.Focus();
-            passwdTextBox.Enter("tricky password is entered here!");
+            var keyboard = Keyboard.Instance;
+            keyboard.Enter("tricky password is entered here!");
+
+            //passwdTextBox.Enter("tricky password is entered here!");
 
             logInButton.Click();
             
         }
+
+        //Chack Norris test!
     }
 }
