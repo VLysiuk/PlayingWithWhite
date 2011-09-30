@@ -82,6 +82,7 @@
             this._logInButton.TabIndex = 4;
             this._logInButton.Text = "Log me in!";
             this._logInButton.UseVisualStyleBackColor = true;
+            this._logInButton.Click += new System.EventHandler(this._logInButton_Click);
             // 
             // _exitButton
             // 
