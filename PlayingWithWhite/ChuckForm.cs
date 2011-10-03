@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 namespace PlayingWithWhite
 {
-    public partial class ChuckControl : UserControl
+    public partial class ChuckForm : Form
     {
-        public ChuckControl()
+        public ChuckForm()
         {
             InitializeComponent();
         }

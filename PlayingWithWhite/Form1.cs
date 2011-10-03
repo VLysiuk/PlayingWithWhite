@@ -23,7 +23,7 @@ namespace PlayingWithWhite
 
         private void _logInButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Error!!!");
+            
         }
     }
 }

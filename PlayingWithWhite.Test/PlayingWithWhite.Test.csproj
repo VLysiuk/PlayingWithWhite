@@ -35,6 +35,9 @@
     <Reference Include="nunit.framework">
       <HintPath>..\Stage\xternallibs\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\Stage\xternallibs\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,8 +54,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainAcceptanceTests.cs" />
+    <Compile Include="ApplicationRunner.cs" />
+    <Compile Include="ChuckAcceptanceTest.cs" />
+    <Compile Include="LogInPresenterTest.cs" />
+    <Compile Include="MainAcceptanceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PlayingWithWhite\PlayingWithWhite.csproj">
+      <Project>{618EC874-A280-4563-9D4D-868249B9175F}</Project>
+      <Name>PlayingWithWhite</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
