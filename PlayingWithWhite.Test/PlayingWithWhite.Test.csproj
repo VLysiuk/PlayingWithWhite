@@ -54,11 +54,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationRunner.cs" />
-    <Compile Include="ChuckAcceptanceTest.cs" />
-    <Compile Include="LogInPresenterTest.cs" />
-    <Compile Include="MainAcceptanceTest.cs" />
+    <Compile Include="Acceptance\ApplicationRunner.cs" />
+    <Compile Include="Acceptance\ChuckAcceptanceTest.cs" />
+    <Compile Include="Acceptance\MainAcceptanceTest.cs" />
+    <Compile Include="Model\LoginServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\ChuckPresenterTest.cs" />
+    <Compile Include="View\LogInPresenterTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PlayingWithWhite\PlayingWithWhite.csproj">

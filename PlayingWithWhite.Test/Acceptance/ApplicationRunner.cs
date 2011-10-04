@@ -4,7 +4,7 @@ using White.Core.UIItems;
 using White.Core.UIItems.Finders;
 using White.Core.UIItems.WindowItems;
 
-namespace PlayingWithWhite.Test
+namespace PlayingWithWhite.Test.Acceptance
 {
     public class ApplicationRunner
     {

@@ -31,11 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this._kickDateTime = new System.Windows.Forms.DateTimePicker();
+            this._kickTypeComboBox = new System.Windows.Forms.ComboBox();
+            this._victimList = new System.Windows.Forms.ListBox();
             this._spareButton = new System.Windows.Forms.Button();
             this._kickButton = new System.Windows.Forms.Button();
-            this._victimList = new System.Windows.Forms.ListBox();
-            this._kickTypeComboBox = new System.Windows.Forms.ComboBox();
-            this._kickDateTime = new System.Windows.Forms.DateTimePicker();
             this._kickLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -72,25 +72,25 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // _spareButton
+            // _kickDateTime
             // 
-            this._spareButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this._spareButton.Location = new System.Drawing.Point(453, 464);
-            this._spareButton.Name = "_spareButton";
-            this._spareButton.Size = new System.Drawing.Size(191, 86);
-            this._spareButton.TabIndex = 3;
-            this._spareButton.Text = "Spare";
-            this._spareButton.UseVisualStyleBackColor = true;
+            this._kickDateTime.Location = new System.Drawing.Point(574, 71);
+            this._kickDateTime.Name = "_kickDateTime";
+            this._kickDateTime.Size = new System.Drawing.Size(252, 20);
+            this._kickDateTime.TabIndex = 2;
             // 
-            // _kickButton
+            // _kickTypeComboBox
             // 
-            this._kickButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this._kickButton.Location = new System.Drawing.Point(669, 464);
-            this._kickButton.Name = "_kickButton";
-            this._kickButton.Size = new System.Drawing.Size(191, 86);
-            this._kickButton.TabIndex = 4;
-            this._kickButton.Text = "Kick!";
-            this._kickButton.UseVisualStyleBackColor = true;
+            this._kickTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._kickTypeComboBox.FormattingEnabled = true;
+            this._kickTypeComboBox.Items.AddRange(new object[] {
+            "Front Kick",
+            "Low Kick",
+            "Side Kick"});
+            this._kickTypeComboBox.Location = new System.Drawing.Point(307, 70);
+            this._kickTypeComboBox.Name = "_kickTypeComboBox";
+            this._kickTypeComboBox.Size = new System.Drawing.Size(208, 21);
+            this._kickTypeComboBox.TabIndex = 1;
             // 
             // _victimList
             // 
@@ -108,25 +108,26 @@
             this._victimList.Size = new System.Drawing.Size(272, 154);
             this._victimList.TabIndex = 0;
             // 
-            // _kickTypeComboBox
+            // _spareButton
             // 
-            this._kickTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this._kickTypeComboBox.FormattingEnabled = true;
-            this._kickTypeComboBox.Items.AddRange(new object[] {
-            "Front Kick",
-            "Low Kick",
-            "Side Kick"});
-            this._kickTypeComboBox.Location = new System.Drawing.Point(307, 70);
-            this._kickTypeComboBox.Name = "_kickTypeComboBox";
-            this._kickTypeComboBox.Size = new System.Drawing.Size(208, 21);
-            this._kickTypeComboBox.TabIndex = 1;
+            this._spareButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this._spareButton.Location = new System.Drawing.Point(453, 464);
+            this._spareButton.Name = "_spareButton";
+            this._spareButton.Size = new System.Drawing.Size(191, 86);
+            this._spareButton.TabIndex = 3;
+            this._spareButton.Text = "Spare";
+            this._spareButton.UseVisualStyleBackColor = true;
+            this._spareButton.Click += new System.EventHandler(this.SpareButtonClick);
             // 
-            // _kickDateTime
+            // _kickButton
             // 
-            this._kickDateTime.Location = new System.Drawing.Point(574, 71);
-            this._kickDateTime.Name = "_kickDateTime";
-            this._kickDateTime.Size = new System.Drawing.Size(252, 20);
-            this._kickDateTime.TabIndex = 2;
+            this._kickButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this._kickButton.Location = new System.Drawing.Point(669, 464);
+            this._kickButton.Name = "_kickButton";
+            this._kickButton.Size = new System.Drawing.Size(191, 86);
+            this._kickButton.TabIndex = 4;
+            this._kickButton.Text = "Kick!";
+            this._kickButton.UseVisualStyleBackColor = true;
             // 
             // _kickLabel
             // 

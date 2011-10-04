@@ -82,7 +82,7 @@
             this._logInButton.TabIndex = 4;
             this._logInButton.Text = "Log me in!";
             this._logInButton.UseVisualStyleBackColor = true;
-            this._logInButton.Click += new System.EventHandler(this._logInButton_Click);
+            this._logInButton.Click += new System.EventHandler(this.LogInButtonClick);
             // 
             // _exitButton
             // 
@@ -94,7 +94,7 @@
             this._exitButton.TabIndex = 5;
             this._exitButton.Text = "Exit";
             this._exitButton.UseVisualStyleBackColor = true;
-            this._exitButton.Click += new System.EventHandler(this._exitButton_Click);
+            this._exitButton.Click += new System.EventHandler(ExitButtonClick);
             // 
             // Form1
             // 

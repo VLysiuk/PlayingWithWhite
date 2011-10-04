@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using NUnit.Framework;
-using White.Core.InputDevices;
 using White.Core.UIItems;
-using White.Core.UIItems.Actions;
 using White.Core.UIItems.Finders;
 using White.Core.UIItems.WindowItems;
 
-namespace PlayingWithWhite.Test
+namespace PlayingWithWhite.Test.Acceptance
 {
     [TestFixture]
     public class MainAcceptanceTest
