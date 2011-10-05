@@ -6,16 +6,20 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using PlayingWithWhite.Model;
 
 namespace PlayingWithWhite
 {
     public partial class ChuckForm : Form, IChuckView
     {
+        private ChuckPresenter _presenter;
+        private readonly IMessageFormatter _messageFormatter;
 
         public ChuckForm()
         {
             InitializeComponent();
-
+            _messageFormatter = new MessageFormatter();
+            _presenter = new ChuckPresenter(this,_messageFormatter);
         }
 
         public string Victim
@@ -25,7 +29,7 @@ namespace PlayingWithWhite
 
         public string KickType
         {
-            get { return _kickTypeComboBox.SelectedText; }
+            get { return _kickTypeComboBox.Text; }
         }
 
         public DateTime KickTime
@@ -41,6 +45,11 @@ namespace PlayingWithWhite
         private void SpareButtonClick(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void KickButtonClick(object sender, EventArgs e)
+        {
+            _presenter.KickClicked();
         }
     }
 }

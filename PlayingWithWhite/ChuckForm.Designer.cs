@@ -128,6 +128,7 @@
             this._kickButton.TabIndex = 4;
             this._kickButton.Text = "Kick!";
             this._kickButton.UseVisualStyleBackColor = true;
+            this._kickButton.Click += new System.EventHandler(KickButtonClick);
             // 
             // _kickLabel
             // 
@@ -136,8 +137,9 @@
             this._kickLabel.ForeColor = System.Drawing.Color.DarkRed;
             this._kickLabel.Location = new System.Drawing.Point(20, 217);
             this._kickLabel.Name = "_kickLabel";
-            this._kickLabel.Size = new System.Drawing.Size(0, 24);
+            this._kickLabel.Size = new System.Drawing.Size(33, 24);
             this._kickLabel.TabIndex = 5;
+            this._kickLabel.Text = "Yo";
             // 
             // ChuckForm
             // 

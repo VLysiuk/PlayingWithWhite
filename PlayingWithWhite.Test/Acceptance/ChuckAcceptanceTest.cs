@@ -12,6 +12,7 @@ namespace PlayingWithWhite.Test.Acceptance
     {
         private readonly ApplicationRunner _appRunner = new ApplicationRunner();
         private Window _chuckWindow;
+        private const int DemonstrationDelay = 2000;
 
         [SetUp]
         public void SetUp()
@@ -38,9 +39,20 @@ namespace PlayingWithWhite.Test.Acceptance
 
             //set value
             var victim = victims.Items[1].Name;
-            victims.Select(victim);
+            victims.Select(victim);       
+            #region Demonstration delay
+            Thread.Sleep(DemonstrationDelay);
+            #endregion
+
             kickType.Select(2);
+            #region Demonstration delay
+            Thread.Sleep(DemonstrationDelay);
+            #endregion
+
             kickTime.Date = DateTime.Now.AddDays(1);
+            #region Demonstration delay
+            Thread.Sleep(DemonstrationDelay);
+            #endregion
 
             //button click
             var kickButton = _chuckWindow.Get<Button>("_kickButton");
@@ -49,6 +61,7 @@ namespace PlayingWithWhite.Test.Acceptance
             var kickResult = String.Format("{0} is going to be kicked with {1} at {2}", victims.SelectedItemText,
                                            kickType.SelectedItemText, kickTime.Date.ToShortDateString());
 
+            Thread.Sleep(DemonstrationDelay);
             var kickLabel = _chuckWindow.Get<Label>("_kickLabel");
             
             Assert.AreEqual(kickResult,kickLabel.Text);
